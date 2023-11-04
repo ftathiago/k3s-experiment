@@ -1,0 +1,8 @@
+- name: Install agent
+  hosts: workers
+  gather_facts: yes
+  tasks:
+    - name: Run k3s script (agent)
+      shell: curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.145:6443 K3S_TOKEN="{{ cluster_token }}" sh -
+      register: agent_output
+    - debug: var=agent_output

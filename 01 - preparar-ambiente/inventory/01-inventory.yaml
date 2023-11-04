@@ -1,0 +1,20 @@
+controller:
+  vars:
+    token: K100d5d45f6d5b1b33908610f0e54b39437286726ac814689d6d5087cba6b129e55::server:73473b6fe98bac22f12bedbec4a1794c           
+  hosts:  
+    controller_node:
+      ansible_host: 192.168.1.145 
+      ansible_user: ftathiago
+      ansible_password: ***REMOVED***
+workers:
+  vars:
+    cluster_token: K10e730db226189894c3ad8a7369b74124eb3d1a026da4069379eaaf777c0a0e2a2::server:73473b6fe98bac22f12bedbec4a1794c
+  hosts:           
+    worker1:
+      ansible_host: 192.168.1.146
+      ansible_user: ftathiago
+      ansible_password: ***REMOVED***
+    worker2:
+      ansible_host: 192.168.1.147
+      ansible_user: ftathiago
+      ansible_password: ***REMOVED***

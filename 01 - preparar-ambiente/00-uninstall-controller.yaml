@@ -1,0 +1,8 @@
+---
+- name: Update SO
+  hosts: controller
+  become: yes
+  gather_facts: no  
+  tasks:
+    - name: Run Controller-Uninstall
+      shell: /usr/local/bin/k3s-uninstall.sh
