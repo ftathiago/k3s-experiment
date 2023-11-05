@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-pg-postgresql-exposable
+  namespace: postgres-database
+  labels:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: dev-pg
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: postgresql
+    app.kubernetes.io/version: 16.0.0
+    helm.sh/chart: postgresql-13.2.1
+  annotations:
+    meta.helm.sh/release-name: dev-pg
+    meta.helm.sh/release-namespace: default
+spec:
+  type: LoadBalancer
+  ports:
+    - name: tcp-postgresql
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
+  selector:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: dev-pg
+    app.kubernetes.io/name: postgresql
