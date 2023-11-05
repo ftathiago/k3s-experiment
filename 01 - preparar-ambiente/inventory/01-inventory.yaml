@@ -1,6 +1,4 @@
 controller:
-  vars:
-    token: K100d5d45f6d5b1b33908610f0e54b39437286726ac814689d6d5087cba6b129e55::server:73473b6fe98bac22f12bedbec4a1794c           
   hosts:  
     controller_node:
       ansible_host: 192.168.1.145 
@@ -8,7 +6,7 @@ controller:
       ansible_password: ***REMOVED***
 workers:
   vars:
-    cluster_token: K10e730db226189894c3ad8a7369b74124eb3d1a026da4069379eaaf777c0a0e2a2::server:73473b6fe98bac22f12bedbec4a1794c
+    cluster_token: K1055df49fbc7c23132f505999efed12f46580bb51e3660948fa68220e4f6e81c9a::server:53ddc7da6908d464644e197094c1a548
   hosts:           
     worker1:
       ansible_host: 192.168.1.146
