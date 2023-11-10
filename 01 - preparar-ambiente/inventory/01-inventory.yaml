@@ -6,7 +6,7 @@ controller:
       ansible_password: ***REMOVED***
 workers:
   vars:
-    cluster_token: K1055df49fbc7c23132f505999efed12f46580bb51e3660948fa68220e4f6e81c9a::server:53ddc7da6908d464644e197094c1a548
+    cluster_token: K100ae08a2cfe9c5ef45887c07b948572e2544f93f9b8909d4594025b2f120c2236::server:e33512e1db3e3ae869fac3c197b6fa2e
   hosts:           
     worker1:
       ansible_host: 192.168.1.146
