@@ -4,7 +4,7 @@
   become: yes
   gather_facts: no  
   tasks:
-    - name: Reboot if needed
+    - name: Reboot all nodes
       ansible.builtin.reboot:
         msg: "Reboot initiated by Ansible for kernel updates"
         connect_timeout: 5

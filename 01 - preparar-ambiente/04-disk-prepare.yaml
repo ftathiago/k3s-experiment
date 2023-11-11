@@ -1,0 +1,23 @@
+- name: Prepare Disk
+  hosts: workers
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Wipe disks
+      shell: "wipefs -a /dev/{{ var_disk }}"
+    - name: Set filesystem
+      ansible.builtin.filesystem:
+        fstype: ext4
+        dev: "/dev/{{ var_disk }}"
+    - name: Revel uuid disks
+      shell: "blkid -s UUID -o value /dev/{{ var_disk }}"
+      register: uuid_disk
+    - debug: var=uuid_disk.stdout_lines
+    # - name: Mount disks
+    #   ansible.posix.mount:
+    #     path: /storage01
+    #     src: UUID={{ var_disk_uuid }} 
+    #     fstype: ext4 
+    #     state: mounted
+    #   register: mount_disk
+    # - debug: var=mount_disk

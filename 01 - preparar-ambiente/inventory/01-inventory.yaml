@@ -12,7 +12,11 @@ workers:
       ansible_host: 192.168.1.146
       ansible_user: ftathiago
       ansible_password: ***REMOVED***
+      var_disk: sda
+      var_disk_uuid: a0ccb594-9b71-4928-a79d-22e66186d549
     worker2:
       ansible_host: 192.168.1.147
       ansible_user: ftathiago
       ansible_password: ***REMOVED***
+      var_disk: sda
+      var_disk_uuid: f382cd84-d639-4f9e-8df8-9b2f3a7a3870
