@@ -72,7 +72,12 @@
       ansible.builtin.apt:
         name: util-linux
         state: present
-
+    
+    - name: Add disk net-tools
+      ansible.builtin.apt:
+        name: net-tools
+        state: present
+    
     - name: Populate service facts
       service_facts:
     - debug:
